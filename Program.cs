@@ -34,6 +34,11 @@
                     }
                 case 4:
                     {
+                        if (input_2 == 0)
+                        {
+                            Console.WriteLine("Делить на ноль нельзя!!! Повторите еще.");
+                            break;
+                        }
                         result = Division(input_1, input_2);
                         break;
                     }
