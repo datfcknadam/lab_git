@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Добрый день! Это SimpleCalc by Dany - калькулятор предназначенный для рассчета простых чисел с простыми действиями");
             Console.WriteLine("Введите действие для рассчета");
             Console.WriteLine("Введите 1 для сложения");
             Console.WriteLine("Введите 2 для вычитания");
