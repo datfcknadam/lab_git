@@ -9,12 +9,12 @@
             Console.WriteLine("Введите 2 для вычитания");
             Console.WriteLine("Введите 3 для умножения");
             Console.WriteLine("Введите 4 для деления \n");
-            int action = Convert.ToInt32(Console.ReadLine());
+            float action = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите первое число");
-            int input_1 = Convert.ToInt32(Console.ReadLine());
+            float input_1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите второе число");
-            int input_2 = Convert.ToInt32(Console.ReadLine());
-            int result = 0;
+            float input_2 = Convert.ToInt32(Console.ReadLine());
+            float result = 0;
             switch (action)
             {
                 case 1:
@@ -34,6 +34,11 @@
                     }
                 case 4:
                     {
+                        if (input_2 == 0)
+                        {
+                            Console.WriteLine("Делить на ноль нельзя!!! Повторите еще.");
+                            break;
+                        }
                         result = Division(input_1, input_2);
                         break;
                     }
@@ -45,27 +50,27 @@
             Console.ReadKey();
         }
         //Сложение  
-        public static int Addition(int input_1, int input_2)
+        public static float Addition(float input_1, float input_2)
         {
-            int result = input_1 + input_2;
+            float result = input_1 + input_2;
             return result;
         }
         // Вычитание  
-        public static int Subtraction(int input_1, int input_2)
+        public static float Subtraction(float input_1, float input_2)
         {
-            int result = input_1 - input_2;
+            float result = input_1 - input_2;
             return result;
         }
         //Умножение  
-        public static int Multiplication(int input_1, int input_2)
+        public static float Multiplication(float input_1, float input_2)
         {
-            int result = input_1 * input_2;
+            float result = input_1 * input_2;
             return result;
         }
         //Деление  
-        public static int Division(int input_1, int input_2)
+        public static float Division(float input_1, float input_2)
         {
-            int result = input_1 / input_2;
+            float result = input_1 / input_2;
             return result;
         }
     }
