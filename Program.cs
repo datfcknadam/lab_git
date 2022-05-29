@@ -5,6 +5,11 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Добрый день! Это SimpleCalc by Dany - калькулятор предназначенный для рассчета простых чисел с простыми действиями");
+            Calc();
+        }
+
+        static void Calc()
+        {
             Console.WriteLine("Введите действие для рассчета");
             Console.WriteLine("Введите 1 для сложения");
             Console.WriteLine("Введите 2 для вычитания");
@@ -48,7 +53,21 @@
                     break;
             }
             Console.WriteLine("Ответ {0}", result);
-            Console.ReadKey();
+            Console.WriteLine("Завершить работу программу (Y / N)?");
+            while (true)
+            {
+                string answer = Console.ReadKey().KeyChar.ToString().ToLower();
+                if (answer == "y")
+                {
+                    break;
+                }
+                if (answer == "n")
+                {
+                    Calc();
+                    break;
+                }
+                Console.WriteLine("Введите (Y / N)");
+            }
         }
         //Сложение  
         public static int Addition(int input_1, int input_2)
